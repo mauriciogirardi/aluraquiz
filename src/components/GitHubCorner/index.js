@@ -31,7 +31,6 @@ const SVGWrapper = styled.svg`
   }
 `;
 
-// eslint-disable-next-line react/prop-types
 export default function GitHubCorner({ projectUrl }) {
   return (
     <Wrapper>
@@ -44,4 +43,4 @@ export default function GitHubCorner({ projectUrl }) {
       </a>
     </Wrapper>
   );
-} 
+}
