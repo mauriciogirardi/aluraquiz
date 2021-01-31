@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
-import db from '../../db.json';
+import db from '../../../db.json';
 
-import { QuizContainer } from '../components/styles/page/home';
-import QuizBackground from '../components/QuizBackground';
-import QuizLogo from '../components/QuizLogo';
-import QuestionWidget from '../components/QuestionWidget';
-import LoadingWidget from '../components/LoadingWidget';
-import ResultWidget from '../components/ResultWidget';
+import { QuizContainer } from '../../components/styles/page/home';
+import QuizBackground from '../../components/QuizBackground';
+import QuizLogo from '../../components/QuizLogo';
+import QuestionWidget from '../../components/QuestionWidget';
+import LoadingWidget from '../../components/LoadingWidget';
+import ResultWidget from '../../components/ResultWidget';
 
 const screenStates = {
   QUIZ: 'QUIZ',

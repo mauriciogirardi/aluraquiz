@@ -1,6 +1,7 @@
 import { ChangeEvent, useCallback, useState } from 'react';
 import Button from '../Button';
 import { Widget, WidgetContent, WidgetHeader, WidgetTopic } from '../Widget';
+import { AlternativesForm } from '../AlternativesForm';
 
 interface QuestionWidgetProps {
   question: {
@@ -67,7 +68,7 @@ const QuestionWidget: React.FC<QuestionWidgetProps> = ({
         <h2>{question.title}</h2>
         <p>{question.description}</p>
 
-        <form onSubmit={handleSubmit}>
+        <AlternativesForm onSubmit={handleSubmit}>
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`;
             return (
@@ -75,6 +76,10 @@ const QuestionWidget: React.FC<QuestionWidgetProps> = ({
                 key={alternativeId}
                 as="label"
                 htmlFor={alternativeId}
+                data-selected={selectedAlternative === alternativeIndex}
+                data-status={
+                  isQuestionSubmit && isCorrect ? 'SUCCESS' : 'ERROR'
+                }
               >
                 <input
                   id={alternativeId}
@@ -93,7 +98,7 @@ const QuestionWidget: React.FC<QuestionWidgetProps> = ({
 
           <p>{isQuestionSubmit && isCorrect && 'Você acertou!'}</p>
           <p>{isQuestionSubmit && !isCorrect && 'Você errou!'}</p>
-        </form>
+        </AlternativesForm>
       </WidgetContent>
     </Widget>
   );

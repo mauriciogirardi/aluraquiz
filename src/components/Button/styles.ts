@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  background-color: ${({ theme }) => theme.light.colors.secondary};
-  color: ${({ theme }) => theme.light.colors.contrastText};
-  border-radius: ${({ theme }) => theme.light.borderRadius};
+  background-color: ${({ theme }) => theme.theme.colors.secondary};
+  color: ${({ theme }) => theme.theme.colors.contrastText};
+  border-radius: ${({ theme }) => theme.theme.borderRadius};
   border: 0;
   width: 100%;
   padding: 10px 16px;

@@ -2,7 +2,12 @@ import { useRouter } from 'next/router';
 import { useCallback, useState } from 'react';
 
 import db from '../../db.json';
-import { WidgetContent, WidgetHeader, Widget } from '../components/Widget';
+import {
+  WidgetContent,
+  WidgetHeader,
+  Widget,
+  WidgetTopic,
+} from '../components/Widget';
 import Footer from '../components/Footer';
 import GitHubCorner from '../components/GitHubCorner';
 import QuizBackground from '../components/QuizBackground';
@@ -51,7 +56,30 @@ const Home: React.FC = () => {
         <Widget>
           <WidgetContent>
             <h1>Quizes da Galera</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>
+              Dá uma olhada nesses quizes incríveis que o pessoal da Imersão
+              fez:
+            </p>
+            <ul>
+              {db.external.map(linkQuiz => {
+                const [project, user] = linkQuiz
+                  .replace('https://', '')
+                  .replace('.vercel.app/', '')
+                  .split('.');
+
+                return (
+                  <li key={linkQuiz}>
+                    <WidgetTopic
+                      href={linkQuiz}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {`${project} / ${user}`}
+                    </WidgetTopic>
+                  </li>
+                );
+              })}
+            </ul>
           </WidgetContent>
         </Widget>
 

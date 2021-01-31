@@ -2,7 +2,7 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    light: {
+    theme: {
       colors: {
         primary: string;
         secondary: string;
@@ -10,8 +10,8 @@ declare module 'styled-components' {
         contrastText: string;
         wrong: string;
         success: string;
-      }
+      };
       borderRadius: string;
-    }
+    };
   }
 }

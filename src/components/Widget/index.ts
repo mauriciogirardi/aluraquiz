@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
-  border: 1px solid ${({ theme }) => theme.light.colors.primary};
-  background-color: ${({ theme }) => theme.light.colors.mainBg};
+  border: 1px solid ${({ theme }) => theme.theme.colors.primary};
+  background-color: ${({ theme }) => theme.theme.colors.mainBg};
   border-radius: 4px;
   overflow: hidden;
   h1,
@@ -27,7 +27,7 @@ export const WidgetHeader = styled.header`
   justify-content: flex-start;
   align-items: center;
   padding: 18px 32px;
-  background-color: ${({ theme }) => theme.light.colors.primary};
+  background-color: ${({ theme }) => theme.theme.colors.primary};
 
   * {
     margin: 0;
@@ -51,12 +51,12 @@ export const WidgetContent = styled.div`
 export const WidgetTopic = styled.a`
   outline: 0;
   text-decoration: none;
-  color: ${({ theme }) => theme.light.colors.contrastText};
-  background-color: ${({ theme }) => `${theme.light.colors.primary}40`};
+  color: ${({ theme }) => theme.theme.colors.contrastText};
+  background-color: ${({ theme }) => `${theme.theme.colors.primary}40`};
   padding: 10px 15px;
   margin-bottom: 8px;
   cursor: pointer;
-  border-radius: ${({ theme }) => theme.light.borderRadius};
+  border-radius: ${({ theme }) => theme.theme.borderRadius};
   transition: 0.3s;
   display: block;
 

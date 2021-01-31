@@ -17,8 +17,8 @@ export const QuizContainer = styled.div`
       border: 0;
       border-radius: 8px;
       margin-top: 12px;
-      color: ${({ theme }) => theme.light.colors.contrastText};
-      background-color: ${({ theme }) => theme.light.colors.primary};
+      color: ${({ theme }) => theme.theme.colors.contrastText};
+      background-color: ${({ theme }) => theme.theme.colors.primary};
       transition: opacity 0.2s;
 
       &:hover {

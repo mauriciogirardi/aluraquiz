@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-
 export default createGlobalStyle`
  * {
     box-sizing: border-box;
@@ -13,7 +12,7 @@ export default createGlobalStyle`
     display: flex;
     flex-direction: column;
     font-family: 'Lato', sans-serif;
-    color: ${({ theme }) => theme.light.colors.contrastText};
+    color: ${({ theme }) => theme.theme.colors.contrastText};
   }
 
   h1, h2, h3, h4, h5, h6  {
